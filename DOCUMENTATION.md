@@ -10,7 +10,7 @@ Description | Web interface |  Logs
 Eureka server | ![eureka](screens/t2_registration_ms_screen.png) | ![eureka](screens/t2_registration_ms_log.png)
 
 # A second account microservice is running in the port 4444 and it is registered (a fourth terminal, log screenshots).
-To accomplish that, the [application.yml](./accounts/src/main/resources/application.yml) file of the account microservice was modified.
+The [application.yml](./accounts/src/main/resources/application.yml) file of the account microservice was modified with the port 4444 instead of the 2222.
 
 Web interface
 :-------------------------:
@@ -25,7 +25,7 @@ Log (accounts microservice)
 ![all](screens/t3_accounts_ms_log_port_4444.png)
 
 # A brief report describing what happens when you kill the microservice with port 2222. Can the web service provide information about the accounts? Why?
-Yes, the web service still provide information about the accounts because the second account microservice will replace the first one as you can see below.
+Yes, the service will still work because, as the Eureka dashboard shows, there is still one ACCOUNTS-SERVICE service running (The log screenshot below shows how the backup service has handled the new query).
 
 Web interface
 :-------------------------:
